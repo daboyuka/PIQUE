@@ -1,0 +1,29 @@
+#
+# Copyright 2015 David A. Boyuka II
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#     http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: PIQUE Parallel
+Description: PIQUE library with parallel (MPI) components included
+URL: https://www.github.com/daboyuka/PIQUE
+Version: @VERSION@
+Requires.private: pique
+Libs: -L${libdir} -lpique-parallel 
+Libs.private: @HDF5_LDFLAGS@ @HDF5_LIBS@ @BOOST_LDFLAGS@ @BOOST_LIB@ @RIDCOMPRESS_LDFLAGS@ @RIDCOMPRESS_LIBS@ @FASTBIT_LDFLAGS@ @FASTBIT_LIBS@
+Cflags: -I${includedir} @HDF5_CPPFLAGS@ @BOOST_CPPFLAGS@ @RIDCOMPRESS_CPPFLAGS@ @FASTBIT_CPPFLAGS@
