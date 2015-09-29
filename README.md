@@ -30,8 +30,8 @@ PIQUE has the following _required_ dependencies:
   * Specifically, Boost **Base**, **Serialization** and **Timer** libraries are required
 * **MPI 2.1**-compliant library or newer
 * A **specially-modified fork of FastBit 1.3.9**
-  * (this is not generally available at the moment; this dependency will be removed when possible)
-* **libridcompress**, available here: <link to be added>
+  * (this is not available for distribution at the moment; this dependency will be removed when possible.)
+* **libridcompress**, to be made available soon
 
 PIQUE has the following _optional_ dependencies:
 
